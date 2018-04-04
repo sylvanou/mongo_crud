@@ -23,7 +23,7 @@ userSchema.methods.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
 };
 
-// checking email cinfirmation
+// checking email confirmation
 userSchema.methods.isEmailConfirmed = function () {
     return this.emailConfirmed;
 };

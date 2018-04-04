@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mongo Crud</title>
+    <title>Atlas</title>
 </head>
 <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="/login">Post Manager</a>
+        <a class="navbar-brand" href="/">Post Manager</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,18 +21,18 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/login">Login
+                    <a class="nav-link" href="/">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/signup">Signup
+                    <a class="nav-link" href="/posts">Posts
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/password-recovery">Forgot Password</a>
-                    <span class="sr-only">(current)</span>
+                    <a class="nav-link" href="/logout">Logout
+                        <span class="sr-only">(current)</span>
                     </a>
                 </li>
             </ul>
@@ -40,9 +40,20 @@
     </nav>
 
     <hr><hr><hr><hr><hr>
-    <div class="logo"></div>
-    <div class="jumbotron text-center">
-            <h1>404 Not Found!</h1>
-        </div>
-        <body>
-          
+    <div class="posts-container">
+        <div class="posts"></div>
+        <form class="post-container" id="itemForm">
+            <h1>Add New Post</h1>
+            <div class="form-group">
+                <label>Text</label>
+                <input type="text" name="header" id="header" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Body</label>
+                <textarea id="body" name="body" class="form-control" rows="4"></textarea>
+            </div>
+            <input type="submit" value="submit" class="btn btn-primary">
+            <hr>
+        </form>
+        <ul id="items" class="list-group"></ul>
+    </div>

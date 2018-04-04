@@ -48,13 +48,20 @@ module.exports = function (app) {
         user: req.user // get the user out of session and pass to template
       });
     });
+
+    // View Posts
+    app.get('/posts', isLoggedIn, function(req, res) {
+      res.render('posts.ejs', {
+        user: req.user
+      });
+    })
   
     // 
     // LOGOUT 
     // 
     app.get('/logout', function (req, res) {
       req.logout();
-      res.redirect('/');
+      res.redirect('/login');
     });
   
     app.get('/password-recovery', function (req, res) {

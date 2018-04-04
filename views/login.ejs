@@ -13,40 +13,24 @@
 
     <div class="container">
         <div class="logo"></div>
-            <form class="form-container" action="" method="post">
-                <input class="form-element" type="text" name="username" value="" placeholder="username/email">
-                <input class="form-element" type="text" name="password" placeholder="password" required>
+        <div class='wrapper'>
+                <!-- show any messages that come back with authentication -->
+                <% if (message.length > 0) { %>
+                <div class="alert alert-danger">
+                  <%= message %>
+                </div>
+                <% } %>
+            <form class="form-container" action="/login" method="post">
+                <input class="form-element" type="text" name="email" value="" placeholder="email" required>
+                <input class="form-element" type="password" name="password" placeholder="password" required>
                 <button type="submit" >SIGN IN</button>
                 <a href="/signup" class="form-element signup" >SIGN UP</a>
+                <a class="link" href="/password-recovery">Forgot Password</a>
             </form>
     </div>
 
 
-    <!-- <div id="login-screen" class="login-container">
-
-        <div class="inputs-container">
-            <div class="input-container"> -->
-    <!-- <div class="input-title">Email:</div> -->
-    <!-- <div class="input-wrapper">
-                    <form>
-                    <input id="email" class="input" type="text" placeholder="email/username">
-                    <input id="password" class="input" type="password" placeholder="password">
-                    <button type="submit" id="signin_btn" class="btn signIn">Sign In</button>
-                    <a href="/signup" id="signup_btn" class="btn signUp">SIGN-UP</a>
-                    </form>
-                </div>
-            </div>
-
-            <div class="input-container"> -->
-    <!-- <div class="input-title">Password:</div> -->
-    <!-- <div class="input-wrapper">
-                </div>
-            </div>
-        </div>
-
-        <div class="btn-container">
-        </div>
-    </div> -->
+    </div> 
 
 </body>
 
